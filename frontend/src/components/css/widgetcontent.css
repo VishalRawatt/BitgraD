@@ -1,0 +1,25 @@
+.widget-contents{
+    display: flex;
+    cursor: pointer;
+}
+.widget-content{
+    margin: 5px;
+    display: flex;
+    padding: 5px;
+    border-bottom: 1px solid lightgrey;
+}
+.widget-content img{
+    height: 30px;
+    border-radius: 5px;
+}
+.widget-title{
+    margin-left: 10px;
+
+}
+.widget-title h5{
+    color: rgb(70,68,68);
+}
+.widget-content p{
+    color: grey;
+    font-size: small;
+}
