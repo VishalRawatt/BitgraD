@@ -25,7 +25,7 @@
 .Qheader-logo img {
   height: 40px !important;
   object-fit: contain;
-  margin-left: -275px;
+  margin-left: -100px;
 }
 
 .Qheader-logo h5 {
@@ -88,6 +88,7 @@
   display: flex;
   align-items: center;
   margin-left: 25px;
+  color: white;
 }
 
 .Qheader-rem .MuiSvgIcon-root {

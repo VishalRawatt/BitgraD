@@ -58,9 +58,9 @@ function Post({post}) {
   return (
     <div className='post'>
       <div className='post-info'>
-        <Avatar src={post?.user?.photo}/>
-        <h4>{post?.user?.userName}</h4>
-        <small><LastSeen date={post?.createdAt}/></small>
+        <Avatar src={user?.photo}/>
+        <h4 style={{fontSize:'15px'}}>{user?.userName}</h4>
+        <small style={{marginTop:"-10px"}}><LastSeen date={post?.createdAt}/></small>
       </div>
       <div className='post-body'>
         <p>
@@ -106,16 +106,16 @@ function Post({post}) {
           <MoreHorizOutlined />
         </div>
       </div>
-      <p style={{ color: "rgba(0,0,0,0.5", fontSize: "12px", fontWeight1: "bold", margin: "10px 0" }}>{post?.allAnswers.length}Answer</p>
+      <p style={{ color: "rgba(0,0,0,0.5", fontSize: "12px", fontWeight1: "bold", margin: "10px 0" }}>{post?.allAnswers.length} Answer</p>
       <div className='post_answer' style={{ margin: "5px 0px 0px 0px", padding: "5px 0px 0px 20px", borderTop: "1px solid lightgrey" }}>
         <div className='post-answercontainer' style={{ display: "flex", flexDirection: "column", width: "100%", padding: "10px 5px", borderTop: "1px solid lightgrey" }}>
           {
             post?.allAnswers?.map((a)=>(<>
           <div className='post-answered' style={{ display: "flex", alignItems: "center", marginBottom: "10px", fontSize: "12px", fontWeight: "600", color: "#888" }}>
-            <Avatar src={post?.user?.userName}/>
-            <div className='post-info' style={{ margin: "0px 10px" }}>
-              <p>{post?.user?.userName}</p>
-              <span><LastSeen date = {a?.createdAt.toLocaleString()}/></span>
+            <Avatar src={user?.photo}/>
+            <div className='post-info' style={{ margin: "10px 10px" }}>
+              <p>{user?.userName}</p>
+              <span style={{marginLeft:"20px",marginTop:"-15px"}}><LastSeen date = {a?.createdAt.toLocaleString()}/></span>
             </div>
           </div>
           <div className='post-answer'>{ReactHtmlParser(a?.answers)}</div>

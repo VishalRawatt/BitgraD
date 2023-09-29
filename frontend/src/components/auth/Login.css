@@ -1,45 +1,13 @@
-/* body {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  .btn:hover {
-    box-shadow: unset !important;
-  }
-  
-  input[type="button"] {
-    outline: none !important;
-  }
-  
-  button::selection {
-    outline: none !important;
-  }
-  
-  .btn::selection {
-    outline: none;
-  }
-  
-  button:focus {
-    outline: none !important;
-  }
-  
-  :root {
-    --vp: 0.052vw;
-    --vm: 0.278vw;
-  } */
 
   .login-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100vw;
+    height: 70vh;
+    width: 70vw;
     box-sizing: border-box;
+    background-color: grey;
+    margin: 80px 220px;
   }
 
   .login-content{
@@ -47,21 +15,38 @@
     align-items: center;
     flex-direction: column;
   }
-
-  .login-content img{
-    width: 200px;
-    object-fit: contain;
-    margin: 20px;
-  }
   .login-content button{
     padding: 10px;
     margin-top: 50px 0px;
-    background-color: black;
-    color: white;
+    background: transparent;
     outline: none;
     border: none;
     border-radius: 3px;
     letter-spacing: 1.1px;
     font-family: monospace;
     cursor: pointer;
+  }
+
+  .heading{
+    font-size: 75px;
+    color: white;
+    background-color: rgb(47, 47, 47);
+    margin-left: 50px;
+    border-radius: 3%;
+  }
+
+  .nbtn img{
+    width: 50px;
+  }
+
+  .form-control{
+    width: 400px !important;
+  }
+
+  .form-label{
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: start;
+    margin-left: 5px;
   }

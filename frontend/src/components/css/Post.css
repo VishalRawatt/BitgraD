@@ -30,7 +30,10 @@
   
   .post-body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-weight: 400;
+    font-size: 18px;
   }
   
   .post-body  .post-question {
@@ -67,10 +70,6 @@
   .post-body  .post-answer  p {
     margin-bottom: 10px;
   }
-  
-  /* .post-image {
-    background: rgb(0, 140, 255);
-  } */
   
   .post-body  img {
     width: 100%;
