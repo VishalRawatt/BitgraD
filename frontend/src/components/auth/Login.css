@@ -47,6 +47,6 @@
     font-weight: 500;
     font-size: 18px;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     margin-left: 5px;
   }

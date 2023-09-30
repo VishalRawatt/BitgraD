@@ -23,15 +23,15 @@ function Login() {
       </div>
       <div className='login-content col-md-6'>
         <form>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+          <div className="mb-3">
+            <label className="form-label">Email address</label>
+            <input type="email" className="form-control"/>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" />
+          <div className="mb-3">
+            <label className="form-label">Password</label>
+            <input type="password" className="form-control"/>
           </div>
-          <button type="submit" class="btn btn-primary" style={{background:"black"}}>SignIn</button>
+          <button type="submit" className="btn btn-primary" style={{background:"black"}}>SignIn</button>
           <p><b>New User ? </b><a href='#43534'style={{textDecoration:"none",color:"white", fontWeight:"500"}}> SignUp</a></p>
           <button className='nbtn'>
           <img src={google} onClick={handleSubmit} alt='googleimg'/>
