@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const db = 'mongodb+srv://Vishal:vishal@vishalrawat.m0jxh57.mongodb.net/Questify';
+require('dotenv').config();
+const db = process.env.DATABASE_NAME ;
 
 module.exports.connect = () => {
     mongoose.connect(db, {
