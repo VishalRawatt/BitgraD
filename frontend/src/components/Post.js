@@ -43,7 +43,7 @@ function Post({post}) {
       }
     }
     if(post?._id && answer !== ""){
-      await axios.post('./api/answers', body,config).then((res)=>{
+      await axios.post('http://localhost:7900/answers', body,config).then((res)=>{
         console.log(res.data)
         alert("Answer added successfully")
         setisModalOpen(false)

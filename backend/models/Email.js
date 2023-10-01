@@ -1,10 +1,12 @@
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 
-const emailSchema = new mongoose.Schema({
-    email:{
-        type: String
-    },
-    password: String
-})
+// const EmailSchema = new mongoose.Schema({
+//     email:{
+//         type: String
+//     },
+//     password:{
+//         type: String
+//     }
+// })
 
-module.exports = mongoose.model('Email', emailSchema)
+// module.exports = mongoose.model('Email', EmailSchema)

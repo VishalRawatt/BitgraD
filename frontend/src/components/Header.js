@@ -36,7 +36,7 @@ function QuoraHeader() {
         questionUrl: inputUrl,
         user: user
       }
-      await axios.post('/api/questions', body, config)
+      await axios.post('http://localhost:7900/questions', body, config)
         .then((res) => {
           console.log(res.data);
           alert(res.data.message);
@@ -87,9 +87,9 @@ function QuoraHeader() {
               <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{background:"grey", height:"30px", width:"30px", display:"flex", alignItems:"center", justifyContent:"center"}}>
               </button>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">My Profile</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#"><span onClick={handleLogout} style={{ display: "flex", color: "white", marginRight: "20px" }}>Logout</span></a></li>
+                <li><a className="dropdown-item" href="/">My Profile</a></li>
+                <li><a className="dropdown-item" href="/">Settings</a></li>
+                <li><a className="dropdown-item" href="/"><span onClick={handleLogout} style={{ display: "flex", color: "white", marginRight: "20px" }}>Logout</span></a></li>
               </ul>
             </div>
         </div>
