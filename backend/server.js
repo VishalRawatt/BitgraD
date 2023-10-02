@@ -39,7 +39,7 @@ app.use('/', router) ;
 db.connect();
 
 //server listen 
-app.listen('https://bitgrad.onrender.com' , ()=>{
+app.listen({port} , ()=>{
     console.log(`server listening on port ${port}`)
 })
 
