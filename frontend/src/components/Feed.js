@@ -8,7 +8,7 @@ function Feed() {
   const[posts, setPosts] = useState([])
 
   useEffect( ()=>{
-    axios.get('http://localhost:7900/questions').then((res)=>{
+    axios.get('https://bitgrad.onrender.com/questions').then((res)=>{
       console.log(res.data.reverse());
       setPosts(res.data);
     }).catch((err)=>{
