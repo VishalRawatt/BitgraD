@@ -36,7 +36,7 @@ function QuoraHeader() {
         questionUrl: inputUrl,
         user: user
       }
-      await axios.post('http://localhost:7900/questions', body, config)
+      await axios.post('https://bitgrad.onrender.com/questions', body, config)
         .then((res) => {
           console.log(res.data);
           alert(res.data.message);
