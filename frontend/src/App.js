@@ -23,7 +23,7 @@ function App() {
         console.log("Auth user", authUser);
       }
       else{
-        console.log("eror in user")
+        console.log("Error in user authentication");
       }
     });
   }, [dispatch])

@@ -19,7 +19,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-
 function QuoraHeader() {
   const [isModalOpen, setisModalOpen] = useState(false)
   const [inputUrl, setInputUrl] = useState("")
