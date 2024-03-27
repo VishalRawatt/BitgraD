@@ -3,14 +3,20 @@ import QBox from './QBox'
 import './css/Feed.css'
 import Post from './Post'
 import axios from 'axios'
+import Loaderr from './Loaderr'
 
-function Feed() {
-  const[posts, setPosts] = useState([])
-
+function Feed(props) {
+  const[posts, setPosts] = useState([]) ;
+  const [loading, setLoading] = useState(true) ;
+  
   useEffect( ()=>{
-    axios.get('https://bitgrad.onrender.com/questions').then((res)=>{
-      console.log(res.data.reverse());
+    <Loaderr/>
+    axios.get("https://bitgrad.onrender.com/questions").then((res)=>{
+      setLoading(true);
+      props.setProgress(30) ;
       setPosts(res.data);
+      props.setProgress(100) ;
+      setLoading(false);
     }).catch((err)=>{
       console.log(err)
     })
@@ -19,7 +25,10 @@ function Feed() {
     <div className='feed'>
        <QBox/>
        {
-        posts.map((post, index)=>(<Post key={index} post={post}/>))
+        loading && <Loaderr/>
+       }
+       {
+        !loading && posts?.map((post, index)=>(<Post key={index} post={post}/>))
        }
     </div>
   )

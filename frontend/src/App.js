@@ -22,13 +22,16 @@ function App() {
         }));
         console.log("Auth user", authUser);
       }
+      else{
+        console.log("eror in user")
+      }
     });
   }, [dispatch])
 
   return (
     <div className="App">
       {
-        user ? (<Quora />) : (<Login />)
+        user ? (<Quora/>) : (<Login/>)
       }
     </div>
   );

@@ -5,14 +5,14 @@ import { auth, provider } from '../../Firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import google from '../../photos/google.png'
-// import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Login() {
-  // const [data, newData] = useState({
-  //   email: "",
-  //   password: ""
-  // })
+  const [data, newData] = useState({
+    email: "",
+    password: ""
+  })
 
   const handleSubmit = async () => {
     await signInWithPopup(auth, provider).then((result) => {
@@ -21,28 +21,28 @@ function Login() {
       console.log(err);
     })
   }
-  // const setdata = (e) => {
-  //   console.log(e.target.value)
-  //   const { name, value } = e.target;
-  //   newData((newone) => {
-  //     return {
-  //       ...newone,
-  //       [name]: value
-  //     }
-  //   })
-  // }
-  // const handleSignIn = async () => {
+  const setdata = (e) => {
+    console.log(e.target.value)
+    const { name, value } = e.target;
+    newData((newone) => {
+      return {
+        ...newone,
+        [name]: value
+      }
+    })
+  }
+  const handleSignIn = async () => {
   
-  //   await axios.post("/login")
-  //     .then((res) => {
-  //       console.log(res.data);
-  //       alert("Login successful")
-  //     }).catch((err) => {
-  //       console.log(err);
-  //       alert("Login failed");
-  //     })
+    await axios.post("/login")
+      .then((res) => {
+        console.log(res.data);
+        alert("Login successful")
+      }).catch((err) => {
+        console.log(err);
+        alert("Login failed");
+      })
 
-  // }
+  }
   return (
     <div className='login-container'>
       <div className='login-content col-md-6'>
@@ -51,7 +51,6 @@ function Login() {
         </div>
       </div>
       <div className='login-content col-md-6'>
-        
           <button className='nbtn'>
             <img src={google} onClick={handleSubmit} alt='googleimg' />
           </button>

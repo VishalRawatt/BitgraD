@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
 const questionDB = require('../models/Question.js');
 
 router.post('/',async(req,res) => {
@@ -36,7 +35,7 @@ router.get('/', async(req,res)=>{
                 $lookup:{
                     from: "answers", //which collection to join
                     localField: "_id",//field from input
-                    foreignField: "questionId",
+                    foreignField: "questionId", //answers k field m questionId hai ek
                     as: "allAnswers" //output inside array
                 }
             }

@@ -19,6 +19,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+
 function QuoraHeader() {
   const [isModalOpen, setisModalOpen] = useState(false)
   const [inputUrl, setInputUrl] = useState("")
@@ -83,10 +84,10 @@ function QuoraHeader() {
         <div className='Qheader-rem'>
             <Avatar src={user?.photo} />
             <p style={{ margin: "10px 0px", marginRight:"15px" }}>{user?.userName}</p>
-            <div class="dropdown">
-              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{background:"grey", height:"30px", width:"30px", display:"flex", alignItems:"center", justifyContent:"center"}}>
+            <div className="dropdown">
+              <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{background:"grey", height:"30px", width:"30px", display:"flex", alignItems:"center", justifyContent:"center"}}>
               </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
+              <ul className="dropdown-menu dropdown-menu-dark">
                 <li><a className="dropdown-item" href="/">My Profile</a></li>
                 <li><a className="dropdown-item" href="/">Settings</a></li>
                 <li><a className="dropdown-item" href="/"><span onClick={handleLogout} style={{ display: "flex", color: "white", marginRight: "20px" }}>Logout</span></a></li>
